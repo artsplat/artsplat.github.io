@@ -749,5 +749,66 @@ a:focus {
   }
 }
 
+/* Tighten the gap between Hero buttons and the teaser video grid */
+section.section.teaser {
+  padding-top: 0;
+}
+.hero .hero-body {
+  padding-bottom: 1.2rem;
+}
+
+/* Widen the teaser grid so each video gets a bit larger */
+section.section.teaser .container {
+  max-width: 1050px;
+}
+
+/* Teaser video grid: frame clips the inner zoom */
+.teaser .teaser-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  background: #000;
+}
+.teaser .teaser-video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  /* Zoom into the video content; frame keeps the box size */
+  transform: scale(1.3);
+  transform-origin: center;
+}
+
+/* Disabled link-block button (e.g., "Coming Soon" placeholders) */
+.is-disabled-link {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Figure card — white card with subtle shadow, used for Method + Results figures */
+.figure-card {
+  background: #ffffff;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: 1.5rem;
+  display: inline-block;
+  max-width: 100%;
+}
+.figure-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: calc(var(--border-radius-lg) - 6px);
+}
+.figure-card figcaption {
+  margin-top: 0.75rem;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  text-align: center;
+}
+
 
 
